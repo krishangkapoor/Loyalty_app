@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Reports{% endblock %}
+
+{% block content %}
+<h1>Reports</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Total Count</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Customers</td>
+            <td>{{ total_customers }}</td>
+            <td><a href="/reports/customers/">View Details</a></td>
+        </tr>
+        <tr>
+            <td>Partners</td>
+            <td>{{ total_partners }}</td>
+            <td><a href="/reports/partners/">View Details</a></td>
+        </tr>
+        <tr>
+            <td>Transactions</td>
+            <td>{{ total_transactions }}</td>
+            <td><a href="/reports/transactions/">View Details</a></td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

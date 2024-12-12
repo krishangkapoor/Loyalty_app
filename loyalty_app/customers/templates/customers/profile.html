@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Customer Profile{% endblock %}
+
+{% block content %}
+<h1>Welcome, {{ customer.name }}</h1>
+<p>Email: {{ customer.email }}</p>
+<p>Phone: {{ customer.phone }}</p>
+<p>Cashback Balance: ${{ customer.cashback_balance }}</p>
+<a href="/transactions/history/{{ customer.id }}">View Transaction History</a>
+{% endblock %}

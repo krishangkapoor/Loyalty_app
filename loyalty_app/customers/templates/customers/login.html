@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Customer Login{% endblock %}
+
+{% block content %}
+<h1>Customer Login</h1>
+<form method="POST" action="/customers/login/">
+    {% csrf_token %}
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
+<a href="/customers/register/">Register as a new customer</a>
+{% endblock %}
