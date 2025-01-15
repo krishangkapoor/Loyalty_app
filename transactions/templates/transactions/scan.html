@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Scan Barcode{% endblock %}
+
+{% block content %}
+<h1>Scan Barcode</h1>
+<form method="POST" action="/transactions/scan/">
+    {% csrf_token %}
+    <label for="customer_id">Customer ID:</label>
+    <input type="text" id="customer_id" name="customer_id" required>
+    <label for="transaction_amount">Amount:</label>
+    <input type="number" id="transaction_amount" name="transaction_amount" required>
+    <label for="cashback_rate">Cashback Rate:</label>
+    <input type="number" id="cashback_rate" name="cashback_rate" step="0.01" required>
+    <button type="submit">Scan</button>
+</form>
+{% endblock %}
